@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## After Download this repository, please Execute following commands
-npm install
-npm install bootstrap --save
-npm install jquery --save
-npm install popper.js --save
+`npm install`
+`npm install bootstrap --save`
+`npm install jquery --save`
+`npm install popper.js --save`
