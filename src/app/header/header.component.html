@@ -1,0 +1,17 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Logo</span>
+    <span class="example-spacer"></span>
+
+    <button mat-button>About Us</button>
+    <button mat-button>Contact Us</button>
+    <button mat-button>Login</button>
+    <button mat-button>Register</button>
+    <button
+      mat-fab
+      color="primary"
+      class="login-user-image-background"
+      [ngStyle]="setProfileImage()"
+    ></button>
+  </mat-toolbar-row>
+</mat-toolbar>

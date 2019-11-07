@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<form #myform="ngForm" (ngSubmit)="calculate(myform)" class="form form-login">
+  <div class="form-field">
+    <mat-form-field>
+      <input
+        matInput
+        name="word"
+        id="login-email"
+        type="text"
+        class="form-input"
+        placeholder="Word"
+        required
+        ngModel
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form-field">
+    <mat-form-field>
+      <input
+        matInput
+        name="ways"
+        type="number"
+        id="login-password"
+        class="form-input"
+        placeholder="Ways"
+        required
+        ngModel
+      />
+    </mat-form-field>
+  </div>
+
+  <div class="form-field">
+    <button type="submit" value="Log in" class="btn btn-primary">
+      Submit
+    </button>
+  </div>
+</form>
