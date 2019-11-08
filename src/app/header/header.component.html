@@ -3,15 +3,15 @@
     <span>Logo</span>
     <span class="example-spacer"></span>
 
-    <button mat-button>About Us</button>
-    <button mat-button>Contact Us</button>
-    <button mat-button>Login</button>
-    <button mat-button>Register</button>
-    <button
+    <a mat-button routerLink="/" routerLinkActive="active">About Us</a>
+    <a mat-button routerLink="/">Contact Us</a>
+    <a mat-button routerLink="/login">Login</a>
+    <a mat-button routerLink="/register">Register</a>
+    <a
       mat-fab
       color="primary"
       class="login-user-image-background"
       [ngStyle]="setProfileImage()"
-    ></button>
+    ></a>
   </mat-toolbar-row>
 </mat-toolbar>
