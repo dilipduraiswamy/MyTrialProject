@@ -26,9 +26,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-
 ## After Download this repository, please Execute following commands
+
 `npm install`
 `npm install bootstrap --save`
 `npm install jquery --save`
 `npm install popper.js --save`
+`npm install --save angularx-social-login`
+
+`https://www.npmjs.com/package/angularx-social-login`
