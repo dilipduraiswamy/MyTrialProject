@@ -15,7 +15,7 @@ import {
   MatButtonModule,
   MatCardModule,
   MatInputModule,
-  MatFormFieldModule
+  MatFormFieldModule,MatMenuModule
 } from "@angular/material";
 
 import { FooterComponent } from "./footer/footer.component";
@@ -27,6 +27,8 @@ import {
   FacebookLoginProvider
 } from "angularx-social-login";
 
+import { HttpClientModule } from '@angular/common/http';
+
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
@@ -34,7 +36,7 @@ let config = new AuthServiceConfig([
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("Facebook-App-Id")
+    provider: new FacebookLoginProvider("707205816356264")
   }
 ]);
 
@@ -64,7 +66,7 @@ export function provideConfig() {
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    SocialLoginModule
+    SocialLoginModule,HttpClientModule,MatMenuModule,
   ],
   providers: [
     {

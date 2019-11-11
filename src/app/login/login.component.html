@@ -1,16 +1,75 @@
-<div [style.visibility]="needLogin ? 'visible' : 'hidden'">
-    <button mat-raised-button (click)="googleLogin()">
-  Google Login
-</button>
-    <button mat-raised-button (click)="facebookLogin()">
-  Facebook Login
-</button>
-</div>
+<div *ngIf="needLogin; else userLoggedIn">
 
-<div [style.visibility]="needLogin ? 'hidden' : 'visible'">
-    <button mat-raised-button (click)="logout()">
-Logout
-</button> {{user.email}}
-</div>
 
-<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+
+
+    <mat-card class="example-card">
+        <mat-card-header>
+
+
+            <mat-card-title>Login</mat-card-title>
+
+        </mat-card-header>
+        <mat-card-content>
+            <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username/email">
+                <!-- <mat-hint>Enter your username</mat-hint> -->
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Password">
+                <!-- <mat-hint>Enter your password</mat-hint> -->
+            </mat-form-field>
+            <button mat-raised-button (click)="login()">
+                Login
+                </button>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button (click)="googleLogin()">
+                Google Login
+                </button>
+            <button mat-raised-button (click)="facebookLogin()">
+                Facebook Login
+                </button>
+        </mat-card-actions>
+    </mat-card>
+
+
+
+
+
+
+
+</div>
+<ng-template #userLoggedIn>
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <img mat-card-avatar src="{{ user.photoUrl }}" />
+            <mat-card-title>{{user.firstName}} {{user.lastName}}</mat-card-title>
+            <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>logout</mat-icon>
+                    <span (click)="logout()">Logout</span>
+                  </button>
+            </mat-menu>
+
+
+        </mat-card-header>
+
+        <mat-card-actions>
+            <button mat-button (click)="logout()">Logout</button>
+
+        </mat-card-actions>
+    </mat-card>
+
+</ng-template>
+
+<!-- <div class=" g-signin2 " data-onsuccess="onSignIn "></div> -->

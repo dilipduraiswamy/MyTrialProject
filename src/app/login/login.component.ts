@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Social_loginService } from "./social_login.service";
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: "app-login",
@@ -7,16 +9,21 @@ import { Social_loginService } from "./social_login.service";
   styleUrls: ["./login.component.css"]
 })
 export class LoginComponent implements OnInit {
-  constructor(private loginService: Social_loginService) {}
+  constructor(private loginService: Social_loginService,private http: HttpClient) {}
 
   user;
   needLogin = true;
-
+  imageToShow;
   ngOnInit() {
     this.loginService.checkUserIsLoggedIn().subscribe(user =>{
       this.user = user;
       if(this.user!=null){
         this.needLogin = false;
+        // this.getImage(user.photoUrl).subscribe(data => {
+        //   this.createImageFromBlob(data);
+        // }, error => {
+        //   console.log("Error occured",error);
+        // });
       } else {
         this.needLogin = true;
       }
@@ -31,10 +38,29 @@ export class LoginComponent implements OnInit {
     this.loginService.signInWithGoogle();
   }
 
-  login() {}
+  login() {
+    alert("cool baby")
+  }
 
   logout() {
     this.loginService.signOut();
   }
+
+
+//   getImage(imageUrl: string): Observable<Blob> {
+//    return this.http.get(imageUrl, { responseType: 'blob' });
+
+// }
+
+// createImageFromBlob(image: Blob) {
+//    let reader = new FileReader(); //you need file reader for read blob data to base64 image data.
+//    reader.addEventListener("load", () => {
+//       this.imageToShow = reader.result; // here is the result you got from reader
+//    }, false);
+
+//    if (image) {
+//       reader.readAsDataURL(image);
+//    }
+// }
   
 }
