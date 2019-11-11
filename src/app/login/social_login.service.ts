@@ -23,4 +23,14 @@ export class Social_loginService {
   signOut(): void {
     this.authService.signOut();
   }
+
+  checkUserIsLoggedIn(){
+    return this.authService.authState;
+    //.subscribe((user) => {
+
+      //console.log(user)
+      //this.user = user;
+      //this.loggedIn = (user != null);
+   // });
+  }
 }

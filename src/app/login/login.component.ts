@@ -9,7 +9,19 @@ import { Social_loginService } from "./social_login.service";
 export class LoginComponent implements OnInit {
   constructor(private loginService: Social_loginService) {}
 
-  ngOnInit() {}
+  user;
+  needLogin = true;
+
+  ngOnInit() {
+    this.loginService.checkUserIsLoggedIn().subscribe(user =>{
+      this.user = user;
+      if(this.user!=null){
+        this.needLogin = false;
+      } else {
+        this.needLogin = true;
+      }
+    })
+  }
 
   facebookLogin() {
     this.loginService.signInWithFB();
@@ -20,4 +32,9 @@ export class LoginComponent implements OnInit {
   }
 
   login() {}
+
+  logout() {
+    this.loginService.signOut();
+  }
+  
 }

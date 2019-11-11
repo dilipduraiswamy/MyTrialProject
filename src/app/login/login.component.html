@@ -1,9 +1,16 @@
-<p>
-  login works!
-</p>
-<button mat-button (click)="googleLogin()">
+<div [style.visibility]="needLogin ? 'visible' : 'hidden'">
+    <button mat-raised-button (click)="googleLogin()">
   Google Login
 </button>
-<button mat-button (click)="facebookLogin()">
+    <button mat-raised-button (click)="facebookLogin()">
   Facebook Login
 </button>
+</div>
+
+<div [style.visibility]="needLogin ? 'hidden' : 'visible'">
+    <button mat-raised-button (click)="logout()">
+Logout
+</button> {{user.email}}
+</div>
+
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->

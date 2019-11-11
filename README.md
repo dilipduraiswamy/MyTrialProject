@@ -35,3 +35,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 `npm install --save angularx-social-login`
 
 `https://www.npmjs.com/package/angularx-social-login`
+
+
+`https://developers.google.com/identity/sign-in/web/sign-in`

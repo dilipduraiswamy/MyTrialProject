@@ -30,10 +30,7 @@ import {
 let config = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider(
-      "xgOwfHRct4uk5ESD1MseT_G5"
-      //"534326531093-676dnih67e3ae0hp1b9la038962ll3bb.apps.googleusercontent.com"
-    ) //"AIzaSyBgPuDr_IxXCvutp_X76Q83Or5_xEfvY5g")//534326531093-676dnih67e3ae0hp1b9la038962ll3bb.apps.googleusercontent.com
+    provider: new GoogleLoginProvider("27728428635-85rmtspnne9dn4rh7c26btda4823pfqh.apps.googleusercontent.com") 
   },
   {
     id: FacebookLoginProvider.PROVIDER_ID,
