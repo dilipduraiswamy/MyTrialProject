@@ -8,6 +8,8 @@ import { HomeComponent } from "./home/home.component";
 import { HeaderComponent } from "./header/header.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
+import { DndModule } from 'ngx-drag-drop';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
 
 import {
   MatToolbarModule,
@@ -28,6 +30,7 @@ import {
 } from "angularx-social-login";
 
 import { HttpClientModule } from '@angular/common/http';
+import { BuildComponent } from './build/build.component';
 
 let config = new AuthServiceConfig([
   {
@@ -51,7 +54,8 @@ export function provideConfig() {
     HeaderComponent,
     FooterComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    BuildComponent
   ],
   imports: [
     BrowserModule,
@@ -67,6 +71,7 @@ export function provideConfig() {
     ReactiveFormsModule,
     RouterModule,
     SocialLoginModule,HttpClientModule,MatMenuModule,
+    SweetAlert2Module.forRoot(), DndModule,
   ],
   providers: [
     {
