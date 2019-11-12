@@ -1,3 +1,10 @@
 .login-user-image-background {
   background-size: cover;
 }
+
+img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}

@@ -1,54 +1,38 @@
 img {
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
 }
 
-.mat-card-actions .mat-button:first-child,
-.mat-card-actions .mat-raised-button:first-child,
-.mat-card-actions .mat-stroked-button:first-child {}
-
-
-/* margin-left: 0; */
-
-
-/* margin-right: 0; */
-
-
-/* margin: 0px 73px 0px 80% !important; */
-
-
-/* } */
-
-.mat-icon-button {
-    margin: 0px 0px 0px 25% !important;
+.mat-icon {
+  margin: 0px 0px 0px 25% !important;
 }
 
 .mat-card {
-    position: -webkit-sticky;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, 50%);
+  position: -webkit-sticky;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
 }
 
-.mat-card>.mat-card-actions:last-child {
-    margin-bottom: -8px;
-    padding-bottom: 0;
-    position: relative;
-    transform: translate(-30%, 0%);
-    left: 50%;
-    right: 50%;
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: -8px;
+  padding-bottom: 0;
+  position: relative;
+  transform: translate(-30%, 0%);
+  left: 50%;
+  right: 50%;
 }
 
 .mat-form-field-flex {
-    width: 350px !important;
+  width: 350px !important;
 }
 
 .example-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.example-container>* {
-    width: 100%;
+.example-container > * {
+  width: 100%;
 }

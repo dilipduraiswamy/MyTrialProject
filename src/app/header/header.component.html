@@ -5,13 +5,22 @@
 
     <a mat-button routerLink="/" routerLinkActive="active">About Us</a>
     <a mat-button routerLink="/">Contact Us</a>
-    <a mat-button routerLink="/login">Login</a>
-    <a mat-button routerLink="/register">Register</a>
-    <a
-      mat-fab
-      color="primary"
-      class="login-user-image-background"
-      [ngStyle]="setProfileImage()"
-    ></a>
+
+    <div *ngIf="needLogin; else userLoggedIn">
+      <a mat-button routerLink="/login">Login</a>
+      <a mat-button routerLink="/register">Register</a>
+    </div>
+    <ng-template #userLoggedIn>
+      <div [matMenuTriggerFor]="menu">
+        <a mat-button>{{ user.firstName }}</a>
+        <img mat-card-avatar src="{{ user.photoUrl }}" />
+      </div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span (click)="logout()">Logout</span>
+        </button>
+      </mat-menu>
+    </ng-template>
   </mat-toolbar-row>
 </mat-toolbar>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Social_loginService } from "../login/social_login.service";
 
 @Component({
   selector: "app-header",
@@ -6,15 +7,23 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private loginService: Social_loginService) {}
 
-  ngOnInit() {}
+  user;
+  needLogin;
 
-  setProfileImage() {
-    let styles = {
-      "background-image":
-        "https://material.angular.io/assets/img/examples/shiba1.jpg"
-    };
-    return styles;
+  ngOnInit() {
+    this.loginService.checkUserIsLoggedIn().subscribe(user => {
+      this.user = user;
+      if (this.user != null) {
+        this.needLogin = false;
+      } else {
+        this.needLogin = true;
+      }
+    });
+  }
+
+  logout() {
+    this.loginService.signOut();
   }
 }
