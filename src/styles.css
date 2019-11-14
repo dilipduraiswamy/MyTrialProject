@@ -138,3 +138,26 @@ body {
     background: white;
     border: none;
 }
+.footer {
+    position: absolute;
+    bottom: 0px;
+}
+.login .mat-form-field-infix {
+    width:100% !important;
+}
+.login .mat-form-field{
+    display: block !important;
+}
+.login .mat-card {
+    text-align: center;
+}
+.login .mat-raised-button {
+    min-width: 100px !important;
+}
+.login .mat-card-header {
+    display: block !important;
+    margin-bottom: 20px !important;
+}
+.login .mat-card-header .mat-card-title {
+    font-size: 30px !important;
+}
