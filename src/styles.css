@@ -8,6 +8,9 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: url("assets/img/background.jpg");
+  background-position: center;
+  background-size: 100%;
 }
 
 .naigation-menu {
@@ -150,14 +153,42 @@ body {
 }
 .login .mat-card {
     text-align: center;
+    padding: 20px 20px 30px 20px;
+    border-radius: 6px;
+    transform: translate(-50%, 35%) !important;
+    background: #efefef;
 }
 .login .mat-raised-button {
-    min-width: 100px !important;
+    min-width: 120px !important;
+    margin-top: 10px;
 }
 .login .mat-card-header {
     display: block !important;
     margin-bottom: 20px !important;
 }
 .login .mat-card-header .mat-card-title {
-    font-size: 30px !important;
+    font-size: 36px !important;
+    letter-spacing: 1px;
+    margin: 10px 0px 20px 0px;
+}
+.login .mat-card {
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 3px #ccc;
+}
+.login .mat-card-actions {
+    transform: none !important;
+    left:auto !important;
+    right:auto !important;
+}
+.login #google {
+    background: #e74235;
+    color: white;
+    width: 175px;
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+.login #facebook {
+    background: #3b5997;
+    color: white;
+    width:175px;
 }
